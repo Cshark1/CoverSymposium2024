@@ -3,16 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        @vite(['resources/css/app.css','resources/js/app.js'])
-
         <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net" />
-        <link
-            href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap"
-            rel="stylesheet"
-        />
 
         <!-- Styles -->
         <style>
@@ -612,66 +603,7 @@
                         scaleY(var(--tw-scale-y));
                 }
             }
-            @media (prefers-color-scheme: dark) {
-                .dark\:bg-gray-900 {
-                    --tw-bg-opacity: 1;
-                    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-                }
-                .dark\:bg-gray-800\/50 {
-                    background-color: rgb(31 41 55 / 0.5);
-                }
-                .dark\:bg-red-800\/20 {
-                    background-color: rgb(153 27 27 / 0.2);
-                }
-                .dark\:bg-dots-lighter {
-                    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E");
-                }
-                .dark\:bg-gradient-to-bl {
-                    background-image: linear-gradient(
-                        to bottom left,
-                        var(--tw-gradient-stops)
-                    );
-                }
-                .dark\:stroke-gray-600 {
-                    stroke: #4b5563;
-                }
-                .dark\:text-gray-400 {
-                    --tw-text-opacity: 1;
-                    color: rgb(156 163 175 / var(--tw-text-opacity));
-                }
-                .dark\:text-white {
-                    --tw-text-opacity: 1;
-                    color: rgb(255 255 255 / var(--tw-text-opacity));
-                }
-                .dark\:shadow-none {
-                    --tw-shadow: 0 0 #0000;
-                    --tw-shadow-colored: 0 0 #0000;
-                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-                        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-                }
-                .dark\:ring-1 {
-                    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-                        var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-                    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-                        calc(1px + var(--tw-ring-offset-width))
-                        var(--tw-ring-color);
-                    box-shadow: var(--tw-ring-offset-shadow),
-                        var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-                }
-                .dark\:ring-inset {
-                    --tw-ring-inset: inset;
-                }
-                .dark\:ring-white\/5 {
-                    --tw-ring-color: rgb(255 255 255 / 0.05);
-                }
-                .dark\:hover\:text-white:hover {
-                    --tw-text-opacity: 1;
-                    color: rgb(255 255 255 / var(--tw-text-opacity));
-                }
-                .group:hover .dark\:group-hover\:stroke-gray-400 {
-                    stroke: #9ca3af;
-                }
-            }
+
             @media (min-width: 640px) {
                 .sm\:fixed {
                     position: fixed;
@@ -718,8 +650,17 @@
                 }
             }
         </style>
+        @vite('resources/css/app.css')
+        @vite('resources/js/app.js')
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+        </style>
     </head>
     <body class="antialiased">
-        {{ $slot }}
+        <x-header :pages="$pages" />
+
+        <div class="main">
+            {{ $slot }}
+        </div>
     </body>
 </html>
