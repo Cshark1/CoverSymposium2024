@@ -1,3 +1,122 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    body {
+        @apply m-0 p-0 bg-bg;
+    }
+    #hero {
+        @apply absolute top-16 left-0 w-full h-[calc(100vh-4rem)] m-0 p-0 bg-black opacity-100 transition-opacity duration-1000 overflow-hidden;
+    }
+    .hero-text-container {
+        @apply absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-3/4 text-center z-10 text-white;
+    }
+    .hero-header {
+        @apply text-5xl font-thin text-primary;
+    }
+    .text-block {
+        @apply pt-8 text-xl leading-8 text-justify
+    }
+    .special-text {
+        @apply absolute top-[calc(100vh+3rem)] left-[calc(50vw+1rem)] rotate-12 text-xl text-primary;
+    }
+    .h1-header {
+        @apply text-4xl pt-16 text-black
+    }
+    .separator {
+        @apply py-4
+    }
+    .info-container {
+        @apply flex flex-row items-center justify-center gap-16 w-full
+    }
+    .info-text-left {
+        @apply text-lg sm:text-2xl whitespace-nowrap text-right text-black
+    }
+    .info-text-right {
+        @apply text-lg sm:text-2xl text-left text-black w-full
+    }
+    .timetable-container {
+        clip-path: polygon(100% 1%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    }
+    .timetable-drop-shadow {
+        filter: drop-shadow(5px 5px 0px #000000);
+    }
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
