@@ -7,8 +7,9 @@
         <div class="timetable-container bg-primary w-full break-normal h-full ps-8 md:ps-12 flex items-center justify-start gap-2">
             <p class="font-normal md:font-bold text-md md:text-base">{{ $event->name }}</p>
             @if(!is_null($event->link))
-                <p class="text-sm font-weight-lighter pt-2">by </p>
-                <a href="{{ $event->link }}" class="text-sm font-weight-lighter pt-2 me-4 text-blue-900 underline">{{$event->speaker}}</a>
+                <p class="text-sm font-weight-lighter pt-2 me-4">by
+                    <a href="{{ $event->link }}" class=" text-blue-900 underline">{{$event->speaker}}</a>
+                </p>
             @else
                 <p class="text-sm font-weight-lighter pt-2 me-4">by {{$event->speaker}}</p>
             @endif
