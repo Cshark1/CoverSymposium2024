@@ -12,8 +12,8 @@ class PageHeaderMiddleware
     {
         $pages = [
             'index' => 'Home',
-            'about' => 'About',
-            'contact' => 'Contact',
+            'speakers' => 'Speakers',
+            'sponsors' => 'Contact',
 
         ];
         view()->share('pages', $pages);
