@@ -662,5 +662,7 @@
         <div class="main">
             {{ $slot }}
         </div>
+
+        <x-footer :pages="$pages" />
     </body>
 </html>

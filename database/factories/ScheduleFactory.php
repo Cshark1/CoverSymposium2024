@@ -12,14 +12,15 @@ class ScheduleFactory extends Factory
 
     public function definition(): array
     {
+        $s_time = Carbon::now()->addHours(rand(9, 20));
         return [
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
-            'title' => $this->faker->word(),
-            'speaker' => $this->faker->word(),
-            'link' => $this->faker->word(),
-            'start_time' => Carbon::now(),
-            'end_time' => $this->faker->word(),
+            'title' => $this->faker->sentence(),
+            'speaker' => $this->faker->name(),
+            'link' => $this->faker->address(),
+            'start_time' => $s_time,
+            'end_time' => $s_time->addHours(1),
         ];
     }
 }

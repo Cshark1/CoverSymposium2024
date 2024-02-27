@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Schedule;
+use App\Models\Sponsor;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/index', function () {
-    return View::make('index');
+    return View::make('index', ['schedule' => Schedule::getSchedule()]);
 });

@@ -61,19 +61,10 @@
         <h2 class="h1-header">Timetable</h2>
 
         <div class="separator"></div>
-        @php
-            $event = (object) [
-                'start_time' => '9:00',
-                'end_time' => '9:30',
-                'name' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit',
-                'speaker' => 'Cover board',
-                'link' => 'https://www.google.com',
-            ];
-        @endphp
 
-        <x-timetable-entry :event="$event"></x-timetable-entry>
-        <x-timetable-entry :event="$event"></x-timetable-entry>
-        <x-timetable-entry :event="$event"></x-timetable-entry>
+        @foreach($schedule as $event)
+            <x-timetable-entry :event="$event"></x-timetable-entry>
+        @endforeach
     </div>
 
 </x-layout>
