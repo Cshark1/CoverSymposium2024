@@ -13,7 +13,7 @@ class PageHeaderMiddleware
         $pages = [
             'index' => 'Home',
             'speakers' => 'Speakers',
-            'sponsors' => 'Contact',
+            'sponsors' => 'Sponsors',
 
         ];
         view()->share('pages', $pages);

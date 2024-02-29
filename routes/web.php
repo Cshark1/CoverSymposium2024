@@ -22,3 +22,11 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return View::make('index', ['schedule' => Schedule::getSchedule()]);
 });
+
+Route::get('/speakers', function () {
+    return View::make('tba');
+});
+
+Route::get('/sponsors', function () {
+    return View::make('sponsors');
+});
