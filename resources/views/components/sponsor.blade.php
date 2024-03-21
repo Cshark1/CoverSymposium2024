@@ -1,3 +1,6 @@
+@if(!is_null($sponsor->link))
+    <a href="{{$sponsor->link}}">
+@endif
 @if (! is_null($sponsor->image))
     <img
         class="h-16 w-auto"
@@ -9,3 +12,7 @@
         {{ $sponsor->name }}
     </p>
 @endif
+@if(!is_null($sponsor->link))
+    </a>
+@endif
+
