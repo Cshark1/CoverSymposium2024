@@ -21,8 +21,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        User::factory()->count(10)->make();
     }
 
     /**
