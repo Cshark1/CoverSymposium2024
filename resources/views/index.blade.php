@@ -82,6 +82,7 @@
                 <p class="info-text-left">🕓When?🕓</p>
                 <p class="info-text-left">📍Where?📍</p>
             </div>
+
             <div class="flex flex-col gap-1">
                 <p class="info-text-right">Included</p>
                 <p class="info-text-right">09:45 - 18:00</p>
@@ -94,16 +95,8 @@
         <div class="separator"></div>
 
         <div class="flex w-full flex-wrap gap-2">
-            <iframe
-                class="w-full md:w-[49%]"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6136.868683901094!2d6.558100402262958!3d53.186246573984036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c832a352659957%3A0x5c5d8507fd9ef917!2sLaan%20Corpus%20Den%20Hoorn%20300%2C%209728%20JT%20Groningen!5e0!3m2!1sro!2snl!4v1708607836483!5m2!1sro!2snl"
-                width="100%"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <iframe class="w-full md:w-[49%]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4781.429839277012!2d6.560986276837393!3d53.187093586627185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c832a352659957%3A0x5c5d8507fd9ef917!2sLaan%20Corpus%20Den%20Hoorn%20300%2C%209728%20JT%20Groningen!5e0!3m2!1sen!2snl!4v1711060392214!5m2!1sen!2snl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             <div
                 class="h-[450px] w-full overflow-hidden md:w-[49%]"
                 style="
