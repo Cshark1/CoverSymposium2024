@@ -84,7 +84,7 @@
             </div>
             <div class="flex flex-col gap-1">
                 <p class="info-text-right">Included</p>
-                <p class="info-text-right">10:00 - 18:00</p>
+                <p class="info-text-right">09:45 - 18:00</p>
                 <p class="info-text-right">
                     Laan Corpus Den Hoorn 300, 9728 JT Groningen
                 </p>
