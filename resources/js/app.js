@@ -1,4 +1,4 @@
-import "preline";
+import 'preline'
 import "./bootstrap";
 
 import "/node_modules/flag-icons/css/flag-icons.min.css";
@@ -7,10 +7,8 @@ import * as THREE from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 
-const TEXTURE_PATH =
-    "https://res.cloudinary.com/dg5nsedzw/image/upload/v1641657168/blog/vaporwave-threejs-textures/grid.png";
-const DISPLACEMENT_PATH =
-    "https://res.cloudinary.com/dg5nsedzw/image/upload/v1641657200/blog/vaporwave-threejs-textures/displacement.png";
+const TEXTURE_PATH = "https://res.cloudinary.com/dg5nsedzw/image/upload/v1641657168/blog/vaporwave-threejs-textures/grid.png";
+const DISPLACEMENT_PATH = "https://res.cloudinary.com/dg5nsedzw/image/upload/v1641657200/blog/vaporwave-threejs-textures/displacement.png";
 
 // Textures
 const textureLoader = new THREE.TextureLoader();
@@ -32,12 +30,14 @@ const material = new THREE.MeshStandardMaterial({
     map: gridTexture,
     displacementMap: terrainTexture,
     displacementScale: 0.4,
+
 });
 
 const plane = new THREE.Mesh(geometry, material);
 plane.rotation.x = -Math.PI * 0.5;
 plane.position.y = 0.0;
 plane.position.z = 0.15;
+
 
 const plane2 = new THREE.Mesh(geometry, material);
 plane2.rotation.x = -Math.PI * 0.5;
@@ -72,6 +72,7 @@ scene.add(ambientLight);
 // scene.add(spotlight2);
 // scene.add(spotlight2.target);
 
+
 // Sizes
 const sizes = {
     width: window.innerWidth,
@@ -83,7 +84,7 @@ const camera = new THREE.PerspectiveCamera(
     75,
     sizes.width / sizes.height,
     0.01,
-    20,
+    20
 );
 camera.position.x = 0;
 camera.position.y = 0.06;
@@ -123,29 +124,26 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
-}
+};
 
 // Debounce the resize event
-window.addEventListener(
-    "resize",
-    debounce(() => {
-        // Update sizes
-        sizes.width = document.documentElement.clientWidth;
-        sizes.height = document.documentElement.clientHeight - 64;
+window.addEventListener("resize", debounce(() => {
+    // Update sizes
+    sizes.width = document.documentElement.clientWidth;
+    sizes.height = document.documentElement.clientHeight - 64;
 
-        // Update camera
-        camera.aspect = sizes.width / sizes.height;
-        camera.updateProjectionMatrix();
+    // Update camera
+    camera.aspect = sizes.width / sizes.height;
+    camera.updateProjectionMatrix();
 
-        // Update renderer
-        renderer.setSize(sizes.width, sizes.height);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    // Update renderer
+    renderer.setSize(sizes.width, sizes.height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-        // Update effect composer
-        effectComposer.setSize(sizes.width, sizes.height);
-        effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    }, 250),
-);
+    // Update effect composer
+    effectComposer.setSize(sizes.width, sizes.height);
+    effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+}, 250));
 
 function getRandIntRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -156,7 +154,7 @@ function lerp(start, end, t) {
 }
 
 const clock = new THREE.Clock();
-let startScale;
+let startScale
 
 let startDisplacementScale = 0.4;
 let endDisplacementScale = getRandIntRange(100, 600) / 1000;
@@ -172,11 +170,7 @@ const tick = () => {
 
     // Calculate the current displacement scale using the lerp function
     if (t <= 1) {
-        const currentDisplacementScale = lerp(
-            startDisplacementScale,
-            endDisplacementScale,
-            t,
-        );
+        const currentDisplacementScale = lerp(startDisplacementScale, endDisplacementScale, t);
 
         // Update the displacement scale of the planes
         plane.material.displacementScale = currentDisplacementScale;
@@ -196,9 +190,11 @@ const tick = () => {
     // Render
     effectComposer.render();
 
-    setTimeout(function () {
-        window.requestAnimationFrame(tick);
-    }, 1000 / 60);
+    setTimeout( function() {
+
+        window.requestAnimationFrame(tick)
+
+    }, 1000 / 60 );
 };
 
 tick();

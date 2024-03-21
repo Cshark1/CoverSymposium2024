@@ -5,11 +5,11 @@
         {{"flex-row"}}
     @endif
 gap-4">
-    <div class="min-w-32">
+    <div class="min-w-32 max-w-32">
         @if(!is_null($speaker->image) && $speaker->isPublished())
-            <img class="h-32" src="{{$speaker->image}}">
+            <img class="w-32" src="{{$speaker->image}}">
         @else
-            <img class="h-32" src="default.png">
+            <img class="w-32" src="default.png">
         @endif
 
         @if(!is_null($speaker->schedule))

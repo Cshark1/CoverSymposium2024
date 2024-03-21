@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -27,6 +28,6 @@ class Speaker extends Model
 
     public function isPublished(): bool
     {
-        return ($this->published_at < now());
+        return (Carbon::createFromTimestamp(Carbon::createFromTimestamp($this->published_at)) < now());
     }
 }
