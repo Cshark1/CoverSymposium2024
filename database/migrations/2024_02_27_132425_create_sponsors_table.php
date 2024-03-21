@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->string('link')->nullable();
             $table->string('image')->nullable();
             $table->integer('order')->nullable();
+            $table->foreignId('sponsor_tiers_id')->nullable()->constrained('sponsor_tiers')->onDelete('set null');
             $table->timestamps();
         });
     }

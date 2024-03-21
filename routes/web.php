@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Schedule;
+use App\Models\Speaker;
 use App\Models\Sponsor;
 use Illuminate\Support\Facades\Route;
 
@@ -24,9 +25,13 @@ Route::get('/index', function () {
 });
 
 Route::get('/speakers', function () {
-    return View::make('tba');
+    return View::make('speakers', ['speakers' => Speaker::all()]);
 });
 
 Route::get('/sponsors', function () {
     return View::make('sponsors');
+});
+
+Route::get('terms', function () {
+    return response()->file(public_path('T_C_SYMPOSIUM_2024.pdf'));
 });

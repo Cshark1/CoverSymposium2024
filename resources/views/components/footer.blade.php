@@ -1,38 +1,53 @@
-<x-sponsors :sponsors="$sponsors" />
+<x-sponsors :sponsorTier="$sponsorTier" />
 
 <div class="separator"></div>
 
 <footer class="bg-white">
-    <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+    <div
+        class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
+    >
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
                 <div class="text-teal-600">
-                    <img class="h-8" src="logo.png" alt="SV Cover logo" />
+                    <a href="https://svcover.nl">
+                        <img class="h-8" src="logo.png" alt="SV Cover logo" />
+                    </a>
                 </div>
 
                 <p class="mt-4 max-w-xs text-gray-500">
-                    Cover is the study association for Artificial Intelligence and Computing Science at the University of Groningen.
+                    <a class="url" href="https://svcover.nl">Cover</a>
+                    is the study association for Artificial Intelligence and
+                    Computing Science at the University of Groningen.
                 </p>
-
             </div>
 
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-                <div>
-                </div>
+            <div
+                class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4"
+            >
+                <div></div>
 
-                <div>
-                </div>
+                <div></div>
 
                 <div>
                     <p class="font-medium text-gray-900">Legal</p>
 
                     <ul class="mt-6 space-y-4 text-sm">
                         <li>
-                            <a href="#" class="text-gray-700 transition hover:opacity-75"> Privacy Policy </a>
+                            <a
+                                href="https://sd.svcover.nl/Privacy%20Statement/Privacy%20statement.pdf"
+                                class="text-gray-700 transition hover:opacity-75"
+                            >
+                                Privacy Statement
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-gray-700 transition hover:opacity-75"> Refund Policy </a>
+                            <a
+                                href="terms"
+                                class="text-gray-700 transition hover:opacity-75"
+                            >
+                                Terms and Conditions
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -42,8 +57,10 @@
 
                     <ul class="mt-6 space-y-4 text-sm">
                         <li>
-                            <a class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                               href="mailto:sympocee@svcover.nl" >
+                            <a
+                                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                                href="mailto:sympocee@svcover.nl"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     class="size-5 shrink-0 text-gray-900"
@@ -59,13 +76,17 @@
                                     />
                                 </svg>
 
-                                <span class="flex-1 text-gray-700">sympocee@svcover.nl</span>
+                                <span class="flex-1 text-gray-700">
+                                    sympocee@svcover.nl
+                                </span>
                             </a>
                         </li>
 
                         <li>
-                            <a class="flex items-center justify-center flex-nowrap gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                               href="mailto:board@svcover.nl" >
+                            <a
+                                class="flex flex-nowrap items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                                href="mailto:board@svcover.nl"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     class="size-5 shrink-0 text-gray-900"
@@ -81,11 +102,15 @@
                                     />
                                 </svg>
 
-                                <span class="flex-1 text-gray-700">board@svcover.nl</span>
+                                <span class="flex-1 text-gray-700">
+                                    board@svcover.nl
+                                </span>
                             </a>
                         </li>
 
-                        <li class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
+                        <li
+                            class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="size-5 shrink-0 text-gray-900"
@@ -106,11 +131,11 @@
                                 />
                             </svg>
 
-                            <address class="-mt-0.5 flex-1 not-italic text-gray-700">
-                                Studievereniging Cover
-                                Postbus 407
-                                9700 AK Groningen
-                                The Netherlands
+                            <address
+                                class="-mt-0.5 flex-1 not-italic text-gray-700"
+                            >
+                                Studievereniging Cover Postbus 407 9700 AK
+                                Groningen The Netherlands
                             </address>
                         </li>
                     </ul>
@@ -118,6 +143,10 @@
             </div>
         </div>
 
-        <p class="text-xs text-gray-500">&copy; {{ \Carbon\Carbon::now()->format('Y') }}. <a class="underline" href="https://cshark.dev">Racoveanu Stefan</a>. All rights reserved.</p>
+        <p class="text-xs text-gray-500">
+            &copy; {{ \Carbon\Carbon::now()->format("Y") }}.
+            <a class="underline" href="https://cshark.dev">Racoveanu Stefan</a>
+            . All rights reserved.
+        </p>
     </div>
 </footer>

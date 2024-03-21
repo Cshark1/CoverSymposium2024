@@ -5,6 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Schedule extends Model
 {
@@ -12,7 +16,7 @@ class Schedule extends Model
 
     public static function getSchedule()
     {
-        return Schedule::all()->sortBy('start_time');
+        return Schedule::with('speaker')->get()->sortBy('start_time');
     }
 
     protected function startTime(): Attribute
@@ -27,5 +31,15 @@ class Schedule extends Model
         return new Attribute(function ($value) {
             return date('H:i', strtotime($value));
         });
+    }
+
+    public function speaker(): BelongsTo
+    {
+        return $this->belongsTo(Speaker::class);
+    }
+
+    public function isPublished(): bool
+    {
+        return ($this->published_at < now());
     }
 }

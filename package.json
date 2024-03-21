@@ -21,7 +21,10 @@
     },
     "dependencies": {
         "a17t": "^0.10.1",
+        "alpinejs": "^3.13.7",
+        "flag-icons": "^7.2.0",
         "preline": "^2.0.3",
+        "r3f-perf": "^7.1.2",
         "three": "^0.161.0"
     }
 }

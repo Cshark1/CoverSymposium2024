@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Sponsor extends Model
 {
@@ -11,11 +12,11 @@ class Sponsor extends Model
 
     public static function getSponsors()
     {
-        return Sponsor::all()->sortBy('order');
+        return Sponsor::with('sponsorTiers')->get()->sortBy('order');
     }
 
-    public static function getContent()
+    public function sponsorTiers(): BelongsTo
     {
-        return Sponsor::select('name', 'description', 'link', 'image', 'order')->orderBy('order', 'desc')->get();
+        return $this->belongsTo(SponsorTiers::class);
     }
 }
