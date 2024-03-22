@@ -21,7 +21,7 @@
             This year, Cover presents a symposium that is going to be (Un)Real!
             It is all happening on the 24th of April 2024! Get ready to discover
             what's real, what's not, and how it all adds up to something even
-            better in the field of AI and CS. Lorem ipsum dolor sit amet. The
+            better in the field of AI and CS. The
             future of tomorrow starts with us today, presenting you with some
             possibilities that you never thought of! Dive with us into the world
             of innovation. A world that might get you thinking about how your
