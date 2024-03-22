@@ -16,7 +16,7 @@
     @foreach ($sponsorTiers as $sponsorTier)
         <div class="flex flex-col items-center justify-items-center gap-4 flex-wrap">
             <p class="h1-header">{{ $sponsorTier->Tier }}</p>
-            <div class="flex items-center">
+            <div class="flex items-center gap-4">
                 @foreach ($sponsorTier->sponsors as $sponsor)
                     <x-sponsor-extended :sponsor="$sponsor"></x-sponsor-extended>
                 @endforeach
