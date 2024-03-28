@@ -9,7 +9,7 @@
         <div
             class="timetable-container flex h-full w-full items-center justify-start gap-2 break-normal bg-primary pe-2 ps-8 md:ps-12"
         >
-            @if (! is_null($event->title) && $event->isPublished())
+            @if (!is_null($event->title) && $event->isPublished())
                 <p class="text-md font-normal md:text-base md:font-bold">
                     {{ $event->title }}
                 </p>
@@ -25,7 +25,12 @@
         <div
             class="flex h-full w-full items-center justify-start gap-2 break-normal bg-primary px-4"
         >
-            @if (! is_null($event->speaker) && $event->isPublished())
+            @if (is_null($event->speaker))
+                <div class="flex flex-col gap-1">
+                    <p class="font-weight-lighter flex flex-row gap-1 text-sm">
+                        -
+                    </p>
+            @elseif ($event->isPublished())
                 <div class="flex flex-col gap-1">
                     <p class="font-weight-lighter flex flex-row gap-1 text-sm">
                         by
@@ -51,4 +56,5 @@
             @endif
         </div>
     </div>
+</div>
 </div>

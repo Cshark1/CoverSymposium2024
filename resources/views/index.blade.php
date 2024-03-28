@@ -112,6 +112,7 @@
 
         <div class="separator"></div>
 
+
         @foreach ($schedule as $event)
             <x-timetable-entry :event="$event"></x-timetable-entry>
         @endforeach
