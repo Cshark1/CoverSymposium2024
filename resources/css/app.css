@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer components {
+    div[visible='true'] {
+        @apply scale-100 opacity-100 block;
+    }
+    div.bgBlur[visible='true'] {
+        @apply opacity-35;
+    }
     body {
         @apply m-0 bg-bg p-0;
     }

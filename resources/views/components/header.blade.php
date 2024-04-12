@@ -1,6 +1,6 @@
 <div class="h-16 w-full"></div>
 <header
-    class="absolute left-0 top-0 z-50 flex w-full flex-wrap bg-bg py-4 text-lg sm:flex-nowrap sm:justify-start"
+    class="absolute left-0 top-0 z-20 flex w-full flex-wrap bg-bg py-4 text-lg sm:flex-nowrap sm:justify-start"
 >
     <nav
         class="mx-auto w-full max-w-[85rem] px-4 sm:flex sm:items-center sm:justify-between"
