@@ -227,6 +227,7 @@
                 @foreach ($pages as $slug => $page)
                     <x-header-item :slug="$slug" :page="$page" />
                 @endforeach
+                <x-tickets-button> </x-tickets-button>
             </div>
         </div>
     </nav>
